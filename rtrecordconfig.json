@@ -1,0 +1,12 @@
+{
+    "SystemTagName" : "string",
+    "fields" : {
+        "systemName" : "system-name",
+        "tag" : "tag",
+        "pType" : "type",
+        "value" : "value",
+        "valueStr" : "valueStr",
+        "quality" : "quality",
+        "timeStamp" : "timeStamp"
+    }
+}

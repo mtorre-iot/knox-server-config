@@ -1,0 +1,54 @@
+kxagent:
+  serviceName: "KNOXAgent"
+  errorLevel: "DEBUG"
+  tsRecordConfigFile: "tsrecordconfig"
+  tsRecordConfigPath: "/etc/opt/knox-server/serverconfig/"
+  rtRecordConfigFile: "rtrecordconfig"
+  rtRecordConfigPath: "/etc/opt/knox-server/serverconfig/"
+  tsPersistence: 
+    hostName: "localhost"
+    port: 8086
+    userName: "sa"
+    password: "sa"
+    databaseName: "kxagentdb"
+    precision: "ms"
+    historyTable: "timeseries"
+    realtimeTable: "realtime"
+  rtPersistence: 
+    hostName: "localhost"
+    port: 6379
+    userName: ""
+    password: ""
+    defaultDB: 0
+    databaseName: "kxagentdb"
+    precision: "ms"
+    historyTable: "timeseries"
+    realtimeTable: "realtime"
+  agentExchange:
+    hostName: "localhost" 
+    exchangeName: "KXExportExchange"
+    queueName: "KXExportAgentQueue"
+    exchangeType: "fanout"
+    routingKey: "#"
+    username: "guest"
+    password: "guest"
+    reliable: false
+    durable: false
+    autoDelete: false
+  timeBetweenPolls: 1000
+kxrtdbman:
+  serviceName: "KNOXDBMan"
+  errorLevel: "DEBUG"
+  port: 4000
+  gfApi:
+    apiRoutesVer: "/v1"
+    apiGfRoute: "/api/gfrtdbman"
+    gets:
+      testConnection: "/"
+      annotations: "/annotations"
+      tagKeys: "/tag-keys"
+      tagValues: "/tag-values"
+    posts:
+      search: "/search"
+      query: "/query"
+

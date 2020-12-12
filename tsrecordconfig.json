@@ -1,0 +1,11 @@
+{
+    "tags" : {
+        "systemName" : "system-name",
+        "tag" : "tag",
+        "pType" : "type"
+    },
+    "fields" : {
+        "value" : "value",
+        "quality" : "quality"
+    }
+}
